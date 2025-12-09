@@ -4,11 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazone.Clone</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="assets/css/footer.css">
+<link rel="stylesheet" href="assets/css/header.css">
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/sidebar.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
-    <header class="header" id="header"></header>
+    <header class="header" id="header">
+        <div class="header-wraper">
+            <div class="header-row1">
+                <div class="logo">
+                    <button id="ToggleSidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <a href="index.html">
+                        <img src="imgs/amazone-logo.png" alt="lodding">
+                        <i class="fa-brands fa-amazon"></i>
+                    </a>
+                </div>
+                <div class="some-text1">
+                    <p><i class="fa-solid fa-location-dot"></i></p>
+                    <div class="some-text1-child">
+                        <p>Deviver to</p>
+                        <p>Bangladesh</p>
+                    </div>
+                </div>
+                <div class="search-container">
+                    <div class="search-wraper">
+                        <select name="selctData" id="selectSearch">
+                        <option value="watch">Watch</option>
+                        <option value="man">Man</option>
+                        <option value="girl">Girl</option>
+                        <option value="Phone">Phone</option>
+                    </select>
+                    <input type="text" placeholder="Search Product...">
+                    <button><i class="ri-search-line"></i></button>
+                    </div>
+                </div>
+                <div class="account-log-con">
+                    <p>Hello, sign in</p>
+                    <p>Account & Lists</p>
+                </div>
+                <div class="returnPolicy">
+                    <p>Returns</p>
+                    <p>& Orders</p>
+                </div>
+                <div class="cart-Show-data">
+
+                    <div class="cart-icon-container">
+                        <button><i class="ri-shopping-cart-line"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-row2">
+                <div class="search-mobile">
+                    <div class="search-container-mobile">
+                        <input type="text" placeholder="Search product....">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-row3">
+                <button id="ToggleMenu"><i class="fa-solid fa-bars"></i></button>
+                <div class="suggest-btns">
+                    <div class="suggest-btns-wraper">
+                    <button>Vedio</button>
+                    <button>Deals</button>
+                    <button>Amazon Basics</button>
+                    <button>Books</button>
+                    <button>Livestreems</button>
+                    <button>Best Sellers</button>
+                    <button>New Release</button>
+                    <button>Home</button>
+                    <button>Miusic</button>
+                    <button>Pc</button>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
     <aside class="sidebar" id="sidebar"></aside>
     <main class="main" id="main"></main>
     <footer class="footer" id="footer"></footer>
+
+    <script src="assets/js/app.js"></script>
+    <script src="data/data.js"></script>
 </body>
 </html>
