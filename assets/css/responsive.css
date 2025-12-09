@@ -10,7 +10,9 @@
 }  
 }
 @media (max-width: 1024px) {
-
+    body {
+        grid-template-columns: 0px 1fr;
+    }
 }
 @media (max-width: 500px) {
     .some-text1 {
@@ -53,5 +55,19 @@
     #ToggleMenu {
         display: none;
     }
-
+    .suggest-btns {
+        margin: 0;
+    }
+    .signIn {
+        display: flex;
+    }
+    .header-row1 {
+        height: 50px;
+    }
+    .suggest-btns-wraper button {
+        padding: 3px 10px;
+    }
+    .header-row4 {
+        display: flex;
+    }
 }

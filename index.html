@@ -16,6 +16,8 @@
 <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
+    <div id="overlyMobile"></div>
+    <div id="overly"></div>
     <header class="header" id="header">
         <div class="header-wraper">
             <div class="header-row1">
@@ -56,9 +58,14 @@
                     <p>& Orders</p>
                 </div>
                 <div class="cart-Show-data">
-
+                    <a class="signIn"href="#">Sign in <i class="fa-regular fa-user"></i></a>
                     <div class="cart-icon-container">
-                        <button><i class="ri-shopping-cart-line"></i></button>
+                        <button>
+                            <i class="ri-shopping-cart-line"></i>
+                            <div id="cartShowCount">
+                                0
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -87,10 +94,37 @@
                 </div>
                 </div>
             </div>
+            <div class="header-row4">
+                <button id="location-notify">
+                    Deliver to bangladesh 
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+            </div>
         </div>
     </header>
-    <aside class="sidebar" id="sidebar"></aside>
-    <main class="main" id="main"></main>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-wraper">
+            <button id="CloseSidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="sidebar-content">
+                <div class="sidebar-header"></div>
+            </div>
+        </div>
+    </aside>
+        <aside id="sidebarDesk"class="sidebar-Desk">
+            <div class="sidebarDesk-wraper">
+                <button id="sidebarDeskClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="sidebarDesk-content">
+
+                </div>
+            </div>
+        </aside>
+    <main class="main" id="main">
+
+    </main>
     <footer class="footer" id="footer"></footer>
 
     <script src="assets/js/app.js"></script>

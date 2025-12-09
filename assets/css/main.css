@@ -1,6 +1,6 @@
 :root {
     --header-height: 105px;
-    --bg-color: white;
+    --bg-color: rgb(255, 255, 255);
     --header-color-light: rgb(0, 98, 41);
 }
 :root[data-theme="light"] {
@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
 body {
     width: 100%;
@@ -23,27 +24,47 @@ body {
     display: grid;
     grid-template-areas: 
     "header header"
-    "sidebar main"
+    "sidebarDesk main"
     "footer footer";
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 180px 1fr;
     grid-template-rows: auto 1fr auto;
     font-family: 'Arial', sans-serif;
+    transition: .4s;
+}
+body.sidebarClose {
+    grid-template-columns: 0px 1fr;
 }
 .header {
     grid-area: header;
-    background-color: var(--header-color-light);
+    background: linear-gradient(60deg, rgb(0, 108, 50), var(--header-color-light), rgb(2, 74, 6) );
 
 }
 .sidebar {
-    grid-area: sidebar;
-    background: red;
+    background: var(--bg-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 84%;
+    box-shadow: 10px 3px 100px rgba(3, 3, 3, 0.101);
+    z-index: 9999;
 }
 .main {
     grid-area: main;
-    background: blue;
+    background: var(--bg-color);
 }
 .footer {
     grid-area: footer;
     background: black;
 }
-
+#overlyMobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.772);
+    z-index: 9999;
+}
+#overlyMobile.active {
+    left: 0;
+    right: 0;
+}
