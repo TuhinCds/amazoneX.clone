@@ -102,6 +102,9 @@ body {
     .header-wraper {
     height: 200px;
 }
+.header-wraper.smallHeight {
+     height: 156px;
+}
 .header-wraper.close{
     height: 60px;
 }

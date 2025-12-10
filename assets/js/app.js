@@ -194,9 +194,7 @@ window.addEventListener('resize', () => {
         headerRow4.style.display = "none"
         headerRow5.style.display = "flex"
         headerRow6.style.display = "none"
-    } else {
-        headerRow4.style.display = "flex"
-    }
+    } 
 })
 
 const BtnProduct = document.querySelectorAll('.AddToCartBtn')
@@ -225,3 +223,8 @@ suggestBtnSelect.forEach(suggbtn => {
         })
     })
 })
+
+setTimeout(() => {
+    headerRow4.style.display = "none "
+   headerWraper.classList.add("smallHeight")
+}, 4000)
