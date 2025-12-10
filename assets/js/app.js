@@ -202,12 +202,26 @@ window.addEventListener('resize', () => {
 const BtnProduct = document.querySelectorAll('.AddToCartBtn')
    BtnProduct.forEach(btn => {
      btn.addEventListener('click', () => {
-        alert("coming soon this cart feature !")
+        alert("This feature is coming soon.")
         btn.style.background = "rgb(255, 119, 0)"
         BtnProduct.forEach(iBtn => {
             if (iBtn !== btn) {
                 iBtn.style.background = "rgb(255, 191, 0)"
-            }
+            } 
         })
     })
    })
+
+const suggestBtnsWraper = document.querySelector('.suggest-btns-wraper')
+let suggestBtnSelect = suggestBtnsWraper.querySelectorAll('button')
+
+suggestBtnSelect.forEach(suggbtn => {
+    suggbtn.addEventListener('click', () => {
+        suggbtn.style.background = "rgba(255, 255, 255, 0.132)"
+        suggestBtnSelect.forEach(suggbtn2 => {
+            if (suggbtn2 !== suggbtn) {
+                suggbtn2.style.background = "rgba(255, 255, 255, 0)"
+            }
+        })
+    })
+})
