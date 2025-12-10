@@ -212,11 +212,16 @@
 .suggest-btns-wraper button {
     border: none;
     white-space: nowrap;
-    padding: 8px 10px;
+    padding: 8px 10px !important;
+    margin: 0 3px;
     background: transparent;
     color: var(--bg-color);
     cursor: pointer;
+    border-radius: 5px;
     transition: .3s;
+}
+.suggest-btns-wraper button:first-child {
+   background: rgba(255, 255, 255, 0.132); 
 }
 .suggest-btns-wraper button:hover {
     background: rgba(255, 255, 255, 0.132);
@@ -284,4 +289,62 @@
     border: none;
     color: var(--bg-color);
      padding: 5px 0;
+}
+.header-row5 {
+    background: rgb(35, 72, 90);
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+}
+.header-row5 p {
+    width: 200px;
+}
+#CloseSidebar {
+    padding: 5px 5px;
+    transition: background .3s;
+    cursor: pointer;
+}
+#CloseSidebar:hover {
+    background: rgba(255, 255, 255, 0.226);
+}
+#ToggleSidebar {
+    padding: 6px 10px;
+    transition: background .3s;
+    cursor: pointer;
+}
+#ToggleSidebar:hover {
+    background: rgba(255, 255, 255, 0.135);
+}
+.sidebar-header {
+    background: rgb(39, 47, 55);
+    padding: 20px;
+
+}
+.login-popup-sidebar {
+    width: 100%;
+    text-align: end;
+   
+}
+.login-popup-sidebar a{
+    color: rgba(255, 255, 255, 0.775);
+    text-decoration: none;
+    font-size: .8rem;
+    
+
+}
+.login-popup-sidebar a i {
+    font-size: 1.1rem;
+}
+.header-texts-sidebar p:nth-child(1) {
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.693);
+}
+.header-texts-sidebar p:nth-child(2) {
+    font-size: 1.9rem;
+    color: rgba(255, 255, 255, 0.693);
 }

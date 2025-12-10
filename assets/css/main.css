@@ -16,6 +16,8 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
+    scrollbar-width: none;
 }
 body {
     width: 100%;
@@ -52,6 +54,7 @@ body.sidebarClose {
 .main {
     grid-area: main;
     background: var(--bg-color);
+    overflow: auto;
 }
 .footer {
     grid-area: footer;
@@ -63,8 +66,4 @@ body.sidebarClose {
     bottom: 0;
     background: rgba(0, 0, 0, 0.772);
     z-index: 9999;
-}
-#overlyMobile.active {
-    left: 0;
-    right: 0;
 }

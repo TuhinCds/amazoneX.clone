@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/sidebar.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/products.css">
 </head>
 <body>
     <div id="overlyMobile"></div>
@@ -75,12 +76,16 @@
                         <input type="text" placeholder="Search product....">
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
+                    <div class="search-suggetion">
+                        
+                    </div>
                 </div>
             </div>
             <div class="header-row3">
                 <button id="ToggleMenu"><i class="fa-solid fa-bars"></i></button>
                 <div class="suggest-btns">
                     <div class="suggest-btns-wraper">
+                    <button>All</button>
                     <button>Vedio</button>
                     <button>Deals</button>
                     <button>Amazon Basics</button>
@@ -100,6 +105,13 @@
                     <i class="ri-arrow-down-s-line"></i>
                 </button>
             </div>
+            <div class="header-row5">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam recusandae rem quidem tempore! Odio nesciunt modi odit ullam pariatur.</p>
+                <div class="header-row5-btns">
+                    <button>Dissmiss</button>
+                    <button>Change Address</button>
+                </div>
+            </div>
         </div>
     </header>
     <aside class="sidebar" id="sidebar">
@@ -107,8 +119,51 @@
             <button id="CloseSidebar">
                 <i class="fa-solid fa-xmark"></i>
             </button>
-            <div class="sidebar-content">
-                <div class="sidebar-header"></div>
+            <div class="sidebar-content-parent">
+                <div class="sidebar-content">
+                <div class="sidebar-header">
+                    <div class="login-popup-sidebar">
+                        <a href="#">Sign in <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+                    </div>
+                    <div class="header-texts-sidebar">
+                        <p>Browse</p>
+                        <p>Amazon</p>
+                    </div>
+                </div>
+                <ul class="sidebar-links">
+                    <li>
+                        <a href="index.html">
+                            <span>Amazone Home</span>
+                            <span><i class="fa-regular fa-house"></i></span>
+                        </a>
+                        
+                    </li>
+                    <li class="trending-product-name">
+                        <p>Trending</p>
+                        <ul>
+                            <li><a href="#">Moves & Shakers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Top Depertments</p>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Health & Household</a></li>
+                            <li><a href="#">Books</a></li>
+                            <li><a href="#">PC</a></li>
+                            <li><a href="#" class="SeeAllTopDepertmentsbtn">See all <span><i class="fa-solid fa-angle-down"></i></span></a></li>
+
+                            <ul class="All-topdepartments">
+                                <li><a href="#">Amazone Miusic</a></li>
+                                <li><a href="#">Prime Video</a></li>
+                                <li><a href="#">Books</a></li>
+                                <li><a href="#">Echo & Alexa</a></li>
+                                <li><a href="#" class="SeeAllTopDepertmentsbtn">See less <span><i class="fa-solid fa-angle-up"></i></span></a></li>
+                            </ul>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
             </div>
         </div>
     </aside>
@@ -125,47 +180,13 @@
     <main class="main" id="main">
         <div class="main-wraper">
             <div class="products-container">
-                <div id="products">
-                    <div class="product">
-                        <div class="product-header">
-                            <img src="imgs/product1.png" alt="">
-                        </div>
-                        <div class="product-footer">
-                            <div class="product-details">
-                                <div class="price-defign">
-                                    <div class="price">100$</div>
-                                    <div class="offer">60% OFF NOW</div>
-                                </div>
-                                <div class="title">Lorem ipsum dolor sit amet consectetur ectetur!</div>
-                                <div class="product-model">MG80 COS</div>
-                                <div class="action-btns">
-                                    <div class="solding-products">
-                                        <div class="location">Dhaka</div>
-                                        <div class="sold">sold 1</div>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="select-quan">
-                                            <select name="selectQuantity" class="SelectQuantity">
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                            </select>
-                                        </div>
-                                        <button>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div id="products"></div>
             </div>
         </div>
     </main>
     <footer class="footer" id="footer"></footer>
 
-    <script src="assets/js/app.js"></script>
-    <script src="data/data.js"></script>
+    <script type="module" src="assets/js/app.js"></script>
+    <script type="module" src="data/data.js"></script>
 </body>
 </html>

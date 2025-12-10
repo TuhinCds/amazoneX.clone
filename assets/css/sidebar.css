@@ -1,5 +1,6 @@
 .sidebar-wraper {
     position: relative;
+    overflow: auto;
 }
 #CloseSidebar {
     position: absolute;
@@ -13,10 +14,9 @@
 #sidebar {
     width: 0;
     transition: width .3s;
+    overflow: auto;
 }
-#sidebar.open {
-    width: 85%;
-}
+
 #sidebarDesk {
     grid-area: sidebarDesk;
     background: var(--bg-color);
@@ -45,4 +45,74 @@
 }
 #sidebarDesk {
     
+}
+.sidebar-content {
+    overflow: hidden;
+    white-space: nowrap;
+}
+.sidebar-links {
+    background: var(--bg-color);
+    list-style: none;
+}
+ul {
+    list-style: none;
+}
+.sidebar-links  li {
+    width: 100%;
+    display: block;
+}
+.sidebar-links  li a{
+    padding: 14px 15px;
+    width: 100%;
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: black;
+}
+.sidebar-links > li:first-child a{
+    padding: 14px 15px;
+    width: 100%;
+    display: block;
+    margin: 0px 0;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.111);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+
+}
+.sidebar-links > li:first-child a {
+    
+}
+.sidebar-links li p {
+    margin-left: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.sidebar-links li ul {
+    margin: 10px;
+}
+.sidebar-links li p {
+    margin-top: 15px;
+    margin-left: 16px;
+}
+.trending-product-name {
+    border-bottom: 4px solid rgba(0, 0, 0, 0.093);
+}
+.sidebar-links li ul li a {
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.749);
+    margin-left: -5px;
+}
+
+.All-topdepartments li a {
+    padding: 14px 0;
+}
+.All-topdepartments {
+    height: 0px;
+    transition: height .4s;
+}
+.All-topdepartments.open {
+    height: 400px;
+    border-top: 1px solid rgba(0, 0, 0, 0.061);
 }

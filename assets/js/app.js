@@ -1,14 +1,26 @@
+import {Products} from './data.js'
+
 const ToggleSidebar = document.getElementById('ToggleSidebar')
 const sidebar = document.getElementById('sidebar')
 const overlyMobile = document.getElementById('overlyMobile')
 const CloseSidebar = document.getElementById('CloseSidebar')
+const sidebarDeskClose = document.getElementById('sidebarDeskClose')
+const ToggleMenu = document.getElementById('ToggleMenu')
+const products = document.getElementById('products')
+
+
 const ToggleSidebarFunc = () => {
    sidebar.classList.toggle('open')
    if (sidebar.classList.contains('open')) {
         addOverlyMobile()
+   } else {
+    removeOverlyMobile()
    }
 }
 ToggleSidebar.addEventListener('click', () => {
+    ToggleSidebarFunc()
+})
+CloseSidebar.addEventListener('click', () => {
     ToggleSidebarFunc()
 })
 const addOverlyMobile = () => {
@@ -23,4 +35,88 @@ const ClickOverly = () => {
 }
 overlyMobile.addEventListener('click', () => {
     ClickOverly()
+})
+
+let SidebarIcon = ToggleMenu.querySelector('i')
+
+const sidebarDeskCloseFunc = () => {
+    document.body.classList.toggle('sidebarClose')
+    if (document.body.classList.contains('sidebarClose')) {
+        SidebarIcon.classList.remove("fa-xmark")
+        SidebarIcon.classList.add("fa-bars")
+    } else {
+         SidebarIcon.classList.remove("fa-bars")
+         SidebarIcon.classList.add("fa-xmark")
+    }
+}
+sidebarDeskClose.addEventListener('click', () => {
+    sidebarDeskCloseFunc()
+})
+ToggleMenu.addEventListener('click', () => {
+    sidebarDeskCloseFunc()
+})
+
+
+//  Append product in product list
+Products.forEach((product, index) => {
+    let createProduct = document.createElement('div')
+    createProduct.classList.add('product')
+
+    createProduct.innerHTML =  `<div class="product-header">
+                            <div class="product-image">
+                                <div class="product-image-header">
+                                    <button class="LikeProduct"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <img src="imgs/${product.product_image}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-footer">
+                            <div class="product-details">
+                                <div class="price-defign">
+                                    <div class="price">${product.price}$</div>
+                                    <div class="offer">${Math.floor(((product.old_price - product.price) / product.old_price) * 100) < 1 ? "" : Math.floor(((product.old_price - product.price) / product.old_price ) * 100) + '% OFF'} <i class="fa-solid fa-tag"></i></div>
+                                </div>
+                                <div class="product-footer-content">
+                                    <div class="title">Lorem ipsum dolor sit amet consectetur ectetur!</div>
+                                    <div class="product-model">${product.model ? 'Model: ' + product.model : ''}</div>
+                                    <div class="action-btns">
+                                        <div class="solding-products">
+                                            <div class="location">${product.location ? `<i class="fa-solid fa-location-dot"></i>` + product.location : ""}</div>
+                                            <div class="sold"><span class="SoldText"><i class="fa-solid fa-bag-shopping"></i>Sold</span><span class="SoldQuantity">${product.sold}</span></div>
+                                        </div>
+                                        <div class="actions">
+                                            <div class="select-quan">
+                                                <select name="selectQuantity" class="SelectQuantity">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                </select>
+                                            </div>
+                                            <button>Add to cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+
+    products.appendChild(createProduct)
+})
+const SeeAllTopDepertmentsbtn = document.querySelectorAll('.SeeAllTopDepertmentsbtn')
+const AllTopdepartments = document.querySelector('.All-topdepartments')
+
+SeeAllTopDepertmentsbtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+    btn.style.display = "none"
+    
+    SeeAllTopDepertmentsbtn.forEach((OthBtn) => {
+        if (OthBtn !== btn) {
+            OthBtn.style.display = "block"
+        }
+    })
+
+    AllTopdepartments.classList.toggle('open')
+
+})
 })
