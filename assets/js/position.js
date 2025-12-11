@@ -10,5 +10,7 @@ navigator.geolocation.getCurrentPosition(async (position) => {
 
     DelivarCountry.innerHTML = data.countryName
 }, () => {
-    alert("Location permission denied! to delivary your country ")
+    setTimeout(() => {
+        alert("Location permission denied! to delivary your country ")
+    }, 1000)
 })
